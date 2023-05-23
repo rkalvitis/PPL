@@ -6,10 +6,14 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 
 import java.util.concurrent.ExecutorService;
@@ -31,20 +35,21 @@ public class GetServiceProviderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_service_provider);
 
+        ProgressBar progressBar = findViewById(R.id.progress_bar);
+        progressBar.setVisibility(View.VISIBLE);
+
+        ConstraintLayout contentLayout = findViewById(R.id.content_layout);
         nameTextView = findViewById(R.id.textViewServiceName);
         emailTextView = findViewById(R.id.textViewServiceEmail);
         // find other TextViews
-
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, PackageManager.PERMISSION_GRANTED);
-
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-
-        StrictMode.setThreadPolicy(policy);
 
         executorService.execute(() -> {
             Service service = serviceDao.getServiceProvider(2);
             runOnUiThread(() -> {
                 if (service != null) {
+                    progressBar.setVisibility(View.GONE);
+                    contentLayout.setVisibility(View.VISIBLE);
+
                     nameTextView.setText(service.getNosaukums());
                     emailTextView.setText(service.getEpasts());
                     // set text on other TextViews
@@ -54,22 +59,6 @@ public class GetServiceProviderActivity extends AppCompatActivity {
                 }
             });
         });
-
-////          Example for create
-//        executorService.execute(() -> {
-//            Service newService = new Service();
-//            // set properties on newService
-//
-//            boolean success = serviceDao.createServiceProvider(newService);
-//
-//            runOnUiThread(() -> {
-//                if (success) {
-//                    Toast.makeText(this, "Service provider created successfully.", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    Toast.makeText(this, "Failed to create service provider.", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//        });
 
     }
 
