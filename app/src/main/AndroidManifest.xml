@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,10 +16,21 @@
         android:theme="@style/Theme.PPL"
         tools:targetApi="31">
         <activity
-            android:name="serviceprovider.activities.GetServiceProviderActivity"
+            android:name="userAuthentication.activities.getAllUsersActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="userAuthentication.activities.adminFunctionalityActivity"
+            android:exported="false" />
+        <activity
+            android:name="userAuthentication.activities.adminEditUserActivity"
+            android:exported="false" />
+        <activity
+            android:name="serviceprovider.activities.GetServiceProviderActivity"
+            android:exported="false" />
+        <activity android:name="userAuthentication.activities.RegisterActivity" />
+        <activity android:name="userAuthentication.activities.UserMainPageActivity" />
+        <activity
+            android:name="userAuthentication.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

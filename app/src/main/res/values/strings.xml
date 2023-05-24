@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">PPL</string>
+    <string name="title_activity_paroles_atjaunosana">ParolesAtjaunosanaActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="name_hint">Vārds <font color="#FF0000">*</font></string>
+    <string name="surname_hint">Uzvārds <font color="#FF0000">*</font></string>
+    <string name="email_hint">E-pasts <font color="#FF0000">*</font></string>
+    <string name="password_hint">Parole <font color="#FF0000">*</font></string>
+    <string name="passwordRepeat_hint">Parole atkārtoti <font color="#FF0000">*</font></string>
+    <string name="phoneNumber_hint">Telefona nr. <font color="#FF0000">*</font></string>
 </resources>
