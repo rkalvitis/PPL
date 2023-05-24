@@ -11,5 +11,10 @@
 /build
 /captures
 .externalNativeBuild
-.cxx
+/.cxx
 local.properties
+ndk
+obj
+.apk
+.aar
+.secrets/
