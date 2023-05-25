@@ -96,7 +96,7 @@ private Button Users;
                                 service.setPilseta(city.getText().toString().trim());
                                 service.setAdrese(address.getText().toString().trim());
                                 service.setEpasts(email.getText().toString().trim());
-                                service.setTelefons(Integer.parseInt(number.getText().toString().trim()));
+                                service.setTelefons(number.getText().toString().trim());
                                 service.setValstsKods(countryCode.getSelectedCountryCodeAsInt());
 
                                 boolean success = serviceDao.updateServiceProvider(service);

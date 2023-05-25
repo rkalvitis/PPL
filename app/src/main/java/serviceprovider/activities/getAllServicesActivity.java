@@ -11,14 +11,16 @@ import com.example.ppl.R;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import serviceprovider.adapters.ServiceUserAdapter;
 import serviceprovider.dao.ServiceDaoImpl;
 import serviceprovider.models.Service;
 import users.activities.adminFunctionalityActivity;
 
-public class getAllServicesActivity extends AppCompatActivity implements serviceAdapter.OnItemClickListener {
+public class getAllServicesActivity extends AppCompatActivity implements ServiceUserAdapter.OnItemClickListener {
     private ServiceDaoImpl serviceDaoImpl;
     private RecyclerView recyclerView;
-    private serviceAdapter serviceAdapter;
+    private ServiceUserAdapter serviceAdapter;
     private ExecutorService executorService;
 
     @Override
@@ -29,7 +31,7 @@ public class getAllServicesActivity extends AppCompatActivity implements service
 
         recyclerView = findViewById(R.id.userRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        serviceAdapter = new serviceAdapter();
+        serviceAdapter = new ServiceUserAdapter();
         serviceAdapter.setOnItemClickListener(this);
         recyclerView.setAdapter(serviceAdapter);
 

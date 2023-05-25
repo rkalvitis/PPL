@@ -25,6 +25,12 @@
             android:name="serviceprovider.activities.CreateServiceProviderActivity"
             android:exported="false" />
         <activity
+            android:name="serviceprovider.activities.GetServiceProviderActivity"
+            android:exported="false" />
+        <activity
+            android:name="serviceprovider.activities.SearchServicesProviderActivity"
+            android:exported="false" />
+        <activity
             android:name="users.activities.changePasswordActivity"
             android:exported="false" />
         <activity
@@ -35,9 +41,6 @@
             android:exported="false" />
         <activity
             android:name="users.activities.adminEditUserActivity"
-            android:exported="false" />
-        <activity
-            android:name="serviceprovider.activities.GetServiceProviderActivity"
             android:exported="false" />
         <activity
             android:name="users.activities.ResetPasswordActivity"

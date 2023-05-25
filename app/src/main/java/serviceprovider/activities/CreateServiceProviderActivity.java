@@ -80,7 +80,6 @@ public class CreateServiceProviderActivity extends AppCompatActivity {
                     if (validateInputs(name, city, adress, email, password, confirmPassword, numberString)) {
                         // Check if the numberString is not empty before parsing
                         if (!numberString.isEmpty()) {
-                            Integer number = Integer.parseInt(numberString);
                             // Check if the email is not already registered
                             executorService.execute(() -> {
                                 Service service = serviceDao.findServiceByEmail(email);
@@ -93,7 +92,7 @@ public class CreateServiceProviderActivity extends AppCompatActivity {
                                         newService.setEpasts(email);
                                         newService.setPilseta(city);
                                         newService.setAdrese(adress);
-                                        newService.setTelefons(number);
+                                        newService.setTelefons(numberString);
                                         newService.setValstsKods(countryCodeInt);
                                         newService.setParole(password);
                                         executorService.execute(() -> {
