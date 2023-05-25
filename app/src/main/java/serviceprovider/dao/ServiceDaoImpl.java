@@ -2,6 +2,8 @@ package serviceprovider.dao;
 
 import database.DatabaseHelper;
 import serviceprovider.models.Service;
+import userAuthentication.models.User;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -12,6 +14,10 @@ public class ServiceDaoImpl implements ServiceDao {
     public Service getServiceProvider(int id) {
         String sql = "SELECT * FROM Servisa_sniedzejs WHERE servisasniedzejs_ID = ?";
         return dbHelper.executeQuery(sql, this::mapToService, id);
+    }
+    public Service findRegisteredService (String email, String password){
+        String sql = "SELECT * FROM Servisa_sniedzejs WHERE epasts = ? AND parole = ?";
+        return dbHelper.executeQuery(sql, this::mapToService, email, password);
     }
 
     @Override

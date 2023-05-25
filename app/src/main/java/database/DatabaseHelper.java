@@ -3,6 +3,8 @@ package database;
 import com.example.ppl.BuildConfig;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
 
 public class DatabaseHelper {
@@ -43,4 +45,25 @@ public class DatabaseHelper {
         }
         return 0;
     }
+    public <T> List<T> executeQueryForList(String sql, Function<ResultSet, T> handler, Object... params) {
+        List<T> resultList = new ArrayList<>();
+        try (Connection connection = DriverManager.getConnection(url, user, passw)) {
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                for (int i = 0; i < params.length; i++) {
+                    statement.setObject(i + 1, params[i]);
+                }
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    while (resultSet.next()) {
+                        T result = handler.apply(resultSet);
+                        resultList.add(result);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return resultList;
+    }
+
 }
