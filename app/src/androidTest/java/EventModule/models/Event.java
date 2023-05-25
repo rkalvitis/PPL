@@ -1,11 +1,11 @@
 package EventModule.models;
 
-import net.sourceforge.jtds.jdbc.DateTime;
+import java.sql.Timestamp;
 
 public class Event {
     private int pasakums_ID;
     private String nosaukums;
-    private DateTime sakumaLaiks;
+    private Timestamp sakumaLaiks;
     private String lokacija;
     private String linksUzFoto;
 
@@ -17,9 +17,9 @@ public class Event {
 
     public void setNosaukums(String nosaukums) { this.nosaukums = nosaukums; }
 
-    public DateTime getSakumaLaiks() { return sakumaLaiks; }
+    public Timestamp getSakumaLaiks() { return sakumaLaiks; }
 
-    public void setSakumaLaiks(DateTime sakumaLaiks) { this.sakumaLaiks = sakumaLaiks; }
+    public void setSakumaLaiks(Timestamp sakumaLaiks) { this.sakumaLaiks = sakumaLaiks; }
 
     public String getLokacija() { return lokacija; }
 

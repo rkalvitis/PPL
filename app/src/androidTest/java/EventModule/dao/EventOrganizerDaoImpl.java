@@ -27,8 +27,7 @@ public class EventOrganizerDaoImpl implements EventOrganizerDao {
     @Override
     public List<EventOrganizers> getEventHelpers(int pasakumaId) {
         String sql = "SELECT * FROM Pasakuma_Rikotajs WHERE pasakums_ID = ?";
-        //return dbHelper.executeQueryForList(sql, this::mapToEventOrganizer, pasakumaId) > 0;
-        return null;
+        return dbHelper.executeQueryForList(sql, this::mapToEventOrganizer, pasakumaId);
     }
 
     private EventOrganizers mapToEventOrganizer(ResultSet resultSet){

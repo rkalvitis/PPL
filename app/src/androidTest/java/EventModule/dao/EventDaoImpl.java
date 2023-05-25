@@ -34,8 +34,8 @@ public class EventDaoImpl implements EventDao {
         Event event = new Event();
         try{
             event.setPasakums_ID(resultSet.getInt("pasakums_ID"));
-            event.setNosaukums((resultSet.getString("nosaukums")));
-            //event.setSakumaLaiks(resultSet.getDate("datumslaiks"));
+            event.setNosaukums(resultSet.getString("nosaukums"));
+            event.setSakumaLaiks(resultSet.getTimestamp("datumslaiks"));
             event.setLokacija((resultSet.getString("atrasanas_vieta")));
             event.setLinksUzFoto(resultSet.getString("foto_video"));
         } catch (SQLException ex){
