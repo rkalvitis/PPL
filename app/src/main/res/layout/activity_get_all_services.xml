@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="users.activities.getAllUsersActivity">
+    tools:context="serviceprovider.activities.getAllServicesActivity">
 
     <ImageButton
         android:id="@+id/returnBackBtn"
@@ -25,7 +25,7 @@
         android:id="@+id/textOfPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lai apskatītu detalizētāku informāciju, nospiediet uz lietotāja vārda"
+        android:text="Lai apskatītu detalizētāku informāciju, nospiediet uz servisa sniedzēja nosaukuma"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="18sp"
@@ -39,7 +39,7 @@
         android:id="@+id/titleOfPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Visi lietotāji"
+        android:text="Visi servisa sniedzēji"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="18sp"

@@ -1,13 +1,12 @@
-package userAuthentication.activities;
+package users.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import com.example.ppl.R;
+import serviceprovider.activities.getAllServicesActivity;
 
 public class adminFunctionalityActivity extends AppCompatActivity {
     SessionManager sessionManager;
@@ -17,7 +16,7 @@ public class adminFunctionalityActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_functionality);
 
         Button usersButton = findViewById(R.id.btn_edit_users);
-        Button sevicesButton = findViewById(R.id.btn_edit_services);
+        Button servicesButton = findViewById(R.id.btn_edit_services);
 
         usersButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,10 +25,10 @@ public class adminFunctionalityActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        sevicesButton.setOnClickListener(new View.OnClickListener() {
+        servicesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(adminFunctionalityActivity.this, adminEditUserActivity.class);
+                Intent intent = new Intent(adminFunctionalityActivity.this, getAllServicesActivity.class);
                 startActivity(intent);
             }
         });

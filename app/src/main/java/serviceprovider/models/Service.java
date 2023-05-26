@@ -6,9 +6,9 @@ public class Service {
     private String epasts;
     private String pilseta;
     private String adrese;
-    private String telefons;
+    private Integer telefons;
     private String parole;
-
+    private Integer valstsKods;
     public int getServisasniedzejs_ID() {
         return servisasniedzejs_ID;
     }
@@ -49,11 +49,11 @@ public class Service {
         this.adrese = adrese;
     }
 
-    public String getTelefons() {
+    public Integer getTelefons() {
         return telefons;
     }
 
-    public void setTelefons(String telefons) {
+    public void setTelefons(Integer telefons) {
         this.telefons = telefons;
     }
 
@@ -63,5 +63,12 @@ public class Service {
 
     public void setParole(String parole) {
         this.parole = parole;
+    }
+
+    public Integer getValstsKods(){
+        return valstsKods;
+    }
+    public void setValstsKods(Integer valstsKods){
+        this.valstsKods = valstsKods;
     }
 }

@@ -1,22 +1,20 @@
-package userAuthentication.activities;
+package users.activities;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.ppl.R;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import userAuthentication.models.User;
+import serviceprovider.models.Service;
+import users.models.User;
 
 public class userAdapter extends RecyclerView.Adapter<userAdapter.UserViewHolder> {
     private List<User> users = new ArrayList<>();
+    private List<Service> services = new ArrayList<>();
     private OnItemClickListener onItemClickListener;
 
     @NonNull
@@ -25,7 +23,6 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.UserViewHolder
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_user, parent, false);
         return new UserViewHolder(itemView);
     }
-
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         User user = users.get(position);
@@ -39,7 +36,6 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.UserViewHolder
         holder.userSurnameTextView.setText(userSurname);
         holder.userEmailTextView.setText(userEmail);
     }
-
     @Override
     public int getItemCount() {
         return users.size();
@@ -49,15 +45,12 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.UserViewHolder
         this.users = users;
         notifyDataSetChanged();
     }
-
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
-
     public interface OnItemClickListener {
         void onItemClick(User user);
     }
-
     class UserViewHolder extends RecyclerView.ViewHolder {
         TextView userNumberTextView;
         TextView userNameTextView;
@@ -82,6 +75,4 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.UserViewHolder
             });
         }
     }
-
-
 }

@@ -1,4 +1,4 @@
-package userAuthentication.models;
+package users.models;
 
 public class User {
     private int lietotajs_ID;
@@ -13,7 +13,6 @@ public class User {
     public int getLietotajs_ID() {
         return lietotajs_ID;
     }
-
     public void setLietotajs_ID(int lietotajs_ID) {
         this.lietotajs_ID = lietotajs_ID;
     }
@@ -28,7 +27,6 @@ public class User {
     public String getUzvards() {
         return uzvards;
     }
-
     public void setUzvards(String uzvards) {
         this.uzvards = uzvards;
     }
@@ -36,16 +34,13 @@ public class User {
     public String getEpasts() {
         return epasts;
     }
-
     public void setEpasts(String epasts) {
         this.epasts = epasts;
     }
 
-
     public Integer getTelefons() {
         return telefons;
     }
-
     public void setTelefons(Integer telefons) {
         this.telefons = telefons;
     }
@@ -53,16 +48,17 @@ public class User {
     public String getParole() {
         return parole;
     }
-
     public void setParole(String parole) {
         this.parole = parole;
     }
+
     public Integer getIsAdmin(){
        return isAdmin;
     }
     public void setIsAdmin(Integer isAdmin){
         this.isAdmin = isAdmin;
     }
+
     public Integer getValstsKods(){
         return valstsKods;
     }

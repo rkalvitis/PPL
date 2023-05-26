@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="userAuthentication.activities.RegisterActivity">
-
+    tools:context="users.activities.RegisterActivity">
 
     <ImageButton
         android:id="@+id/returnBackBtn"
@@ -24,18 +23,18 @@
 
     <TextView
         android:id="@+id/appName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="381dp"
+        android:layout_height="42dp"
         android:text="Pasākumu plānotājs"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.118" />
-
+        app:layout_constraintVertical_bias="0.104" />
 
     <TextView
         android:id="@+id/registerText"
@@ -49,24 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213" />
-
-
-    <EditText
-        android:id="@+id/passwordAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="273dp"
-        android:drawableLeft="@drawable/baseline_lock_24"
-        android:ems="10"
-        android:hint="@string/passwordRepeat_hint"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639" />
+        app:layout_constraintVertical_bias="0.177" />
 
     <EditText
         android:id="@+id/email"
@@ -82,7 +64,53 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471" />
+        app:layout_constraintVertical_bias="0.421" />
+
+    <EditText
+        android:id="@+id/nosaukums"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <EditText
+        android:id="@+id/passwordAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="273dp"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:ems="10"
+        android:hint="@string/passwordRepeat_hint"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
+
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:ems="10"
+        android:hint="@string/surname_hint"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336" />
 
     <EditText
         android:id="@+id/password"
@@ -98,37 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.553" />
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="273dp"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/baseline_person_24"
-        android:ems="10"
-        android:hint="@string/name_hint"
-        android:inputType="text"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
-
-    <EditText
-        android:id="@+id/surname"
-        android:layout_width="273dp"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/baseline_person_24"
-        android:ems="10"
-        android:hint="@string/surname_hint"
-        android:inputType="text"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
+        app:layout_constraintVertical_bias="0.688" />
 
     <EditText
         android:id="@+id/number"
@@ -144,7 +142,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+        app:layout_constraintVertical_bias="0.597" />
 
     <com.hbb20.CountryCodePicker
         android:id="@+id/countryCodePicker"
@@ -153,10 +151,12 @@
         app:ccp_defaultNameCode="LV"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.732" />
+        app:layout_constraintVertical_bias="0.509">
+
+    </com.hbb20.CountryCodePicker>
 
     <Button
         android:id="@+id/registerBtn"
@@ -183,6 +183,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.997" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
