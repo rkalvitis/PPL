@@ -15,12 +15,21 @@ public class EventDaoImpl implements EventDao {
     }
 
     @Override
-    public boolean createEvent(Event event, int userId){
+    public int createEvent(Event event, int userId){
         String eventSql = "INSERT INTO Pasakums (nosaukums, datumslaiks, atrasanas_vieta, foto_video) VALUES (?, ?, ?, ?)";
+        String querySql = "SELECT * FROM Pasakums WHERE nosaukums = ? AND datumslaiks = ?";
         String helperSql = "INSERT INTO Pasakuma_Rikotajs (pasakums_ID, lietotajs_ID, rikotajs, paligs) VALUES (?, ?, ?, ?)";
+
         int eventAdded = dbHelper.executeUpdate(eventSql, event.getNosaukums(), event.getSakumaLaiks(), event.getLokacija(), event.getLinksUzFoto());
-        int helperAdded = dbHelper.executeUpdate(helperSql, event.getPasakums_ID(), userId, 1, 0);
-        return (eventAdded > 0 && helperAdded > 0);
+        if(eventAdded > 0){
+            Event newEvent = dbHelper.executeQuery(querySql, this::mapToEvent, event.getNosaukums(), event.getSakumaLaiks());
+            int helperAdded = dbHelper.executeUpdate(helperSql, newEvent.getPasakums_ID(), userId, 1, 0);
+            if (helperAdded > 0) {
+                return newEvent.getPasakums_ID();
+            }
+        }
+
+        return 0;
     }
 
     @Override
