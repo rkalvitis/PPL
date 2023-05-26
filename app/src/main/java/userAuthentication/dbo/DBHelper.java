@@ -36,6 +36,12 @@ public class DBHelper implements UserDbo {
         String sql = "SELECT * FROM Lietotajs WHERE isAdmin = 0";
         return dbHelper.executeQueryForList(sql, this::mapToUser);
     }
+    @Override
+    public List<User> getAllUsersForEvent(long pasakumsId){
+        String sql = "select Lietotajs.* from Pasakuma_Rikotajs " +
+                "inner join Lietotajs on Lietotajs.lietotajs_ID = Pasakuma_Rikotajs.lietotajs_ID where Pasakuma_Rikotajs.pasakums_ID = ?";
+        return dbHelper.executeQueryForList(sql, this::mapToUser, pasakumsId);
+    }
 
     private User mapToUser(ResultSet resultSet) {
         User user = new User();
