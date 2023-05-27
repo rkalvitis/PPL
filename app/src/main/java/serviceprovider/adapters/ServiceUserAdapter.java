@@ -1,4 +1,4 @@
-package serviceprovider.activities;
+package serviceprovider.adapters;
 
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,19 +10,19 @@ import com.example.ppl.R;
 import java.util.ArrayList;
 import java.util.List;
 import serviceprovider.models.Service;
-public class serviceAdapter extends RecyclerView.Adapter<serviceAdapter.UserViewHolder> {
+public class ServiceUserAdapter extends RecyclerView.Adapter<ServiceUserAdapter.UserViewHolder> {
     private List<Service> services = new ArrayList<>();
-    private serviceprovider.activities.serviceAdapter.OnItemClickListener onItemClickListener;
+    private ServiceUserAdapter.OnItemClickListener onItemClickListener;
 
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_user, parent, false);
-        return new serviceprovider.activities.serviceAdapter.UserViewHolder(itemView);
+        return new ServiceUserAdapter.UserViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull serviceAdapter.UserViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ServiceUserAdapter.UserViewHolder holder, int position) {
         Service service = services.get(position);
         String userNumber = (position + 1) + ".";
         String userName = service.getNosaukums();
@@ -45,7 +45,7 @@ public class serviceAdapter extends RecyclerView.Adapter<serviceAdapter.UserView
         this.services = services;
         notifyDataSetChanged();
     }
-    public void setOnItemClickListener(serviceAdapter.OnItemClickListener listener) {
+    public void setOnItemClickListener(ServiceUserAdapter.OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
     public interface OnItemClickListener {

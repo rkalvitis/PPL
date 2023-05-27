@@ -1,6 +1,8 @@
 package users.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         openLoginButton.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("StaticFieldLeak")
             @Override
             public void onClick(View v) {
                 email = findViewById(R.id.userEmail);
