@@ -8,6 +8,10 @@
     <string name="surname_hint">Uzvārds <font color="#FF0000">*</font></string>
     <string name="email_hint">E-pasts <font color="#FF0000">*</font></string>
     <string name="password_hint">Parole <font color="#FF0000">*</font></string>
+    <string name="nameOfService_hint">Nosaukums <font color="#FF0000">*</font></string>
+    <string name="adress_hint">Adrese <font color="#FF0000">*</font></string>
+    <string name="city_hint">Pilsēta <font color="#FF0000">*</font></string>
     <string name="passwordRepeat_hint">Parole atkārtoti <font color="#FF0000">*</font></string>
+    <string name="passwordOld_hint">Vecā parole <font color="#FF0000">*</font></string>
     <string name="phoneNumber_hint">Telefona nr. <font color="#FF0000">*</font></string>
 </resources>

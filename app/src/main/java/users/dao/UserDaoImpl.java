@@ -1,20 +1,14 @@
-package userAuthentication.dbo;
+package users.dao;
 
 import database.DatabaseHelper;
-import serviceprovider.dao.ServiceDao;
-import serviceprovider.dao.ServiceDaoImpl;
-import serviceprovider.models.Service;
-import userAuthentication.models.User;
+import users.models.User;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
-public class DBHelper implements UserDbo {
+public class UserDaoImpl implements UserDao {
     private final DatabaseHelper dbHelper = new DatabaseHelper();
 
-    //user registration
     @Override
     public User getUser(int id) {
         String sql = "SELECT * FROM Lietotajs WHERE lietotajs_ID = ?";
@@ -36,7 +30,19 @@ public class DBHelper implements UserDbo {
         String sql = "SELECT * FROM Lietotajs WHERE isAdmin = 0";
         return dbHelper.executeQueryForList(sql, this::mapToUser);
     }
-
+    public boolean updateUser(User user) {
+        String sql = "UPDATE Lietotajs SET vards = ?, uzvards = ?, epasts = ?, telefons = ?, valstsKods = ? WHERE lietotajs_ID = ?";
+        return dbHelper.executeUpdate(sql, user.getVards(), user.getUzvards(), user.getEpasts(), user.getTelefons(), user.getValstsKods(), user.getLietotajs_ID()) > 0;
+    }
+    @Override
+    public boolean updatePassword(int userId, String newPassword) {
+        String sql = "UPDATE Lietotajs SET Parole = ? WHERE lietotajs_ID = ?";
+        return dbHelper.executeUpdate(sql, newPassword, userId) > 0;
+    }
+    public boolean deleteUser(int id) {
+        String sql = "DELETE FROM Lietotajs WHERE lietotajs_ID = ?";
+        return dbHelper.executeUpdate(sql, id) > 0;
+    }
     private User mapToUser(ResultSet resultSet) {
         User user = new User();
         try {
@@ -54,5 +60,4 @@ public class DBHelper implements UserDbo {
         }
         return user;
     }
-
 }

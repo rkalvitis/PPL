@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,21 +16,36 @@
         android:theme="@style/Theme.PPL"
         tools:targetApi="31">
         <activity
-            android:name="userAuthentication.activities.getAllUsersActivity"
+            android:name="serviceprovider.activities.adminEditServiceActivity"
             android:exported="false" />
         <activity
-            android:name="userAuthentication.activities.adminFunctionalityActivity"
+            android:name="serviceprovider.activities.getAllServicesActivity"
             android:exported="false" />
         <activity
-            android:name="userAuthentication.activities.adminEditUserActivity"
+            android:name="serviceprovider.activities.CreateServiceProviderActivity"
+            android:exported="false" />
+        <activity
+            android:name="users.activities.changePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="users.activities.getAllUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name="users.activities.adminFunctionalityActivity"
+            android:exported="false" />
+        <activity
+            android:name="users.activities.adminEditUserActivity"
             android:exported="false" />
         <activity
             android:name="serviceprovider.activities.GetServiceProviderActivity"
             android:exported="false" />
-        <activity android:name="userAuthentication.activities.RegisterActivity" />
-        <activity android:name="userAuthentication.activities.UserMainPageActivity" />
         <activity
-            android:name="userAuthentication.activities.MainActivity"
+            android:name="users.activities.ResetPasswordActivity"
+            android:label="Reset Password" />
+        <activity android:name="users.activities.RegisterActivity" />
+        <activity android:name="users.activities.UserMainPageActivity" />
+        <activity
+            android:name="users.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

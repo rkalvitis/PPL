@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="userAuthentication.activities.MainActivity">
+    tools:context="users.activities.MainActivity">
 
     <TextView
         android:id="@+id/nameOfApp"
@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.459" />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_send"
         android:layout_width="273dp"
         android:layout_height="48dp"
         android:backgroundTint="#673AB7"
@@ -93,7 +93,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.802" />
-
 
     <Button
         android:id="@+id/forgotPassword"
@@ -122,17 +121,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.942" />
-
-    <Button
-        android:id="@+id/button_navigate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="183dp"
-        android:text="Go to Service inspect"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
