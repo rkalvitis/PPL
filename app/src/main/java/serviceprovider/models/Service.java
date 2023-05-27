@@ -8,6 +8,9 @@ public class Service {
     private String adrese;
     private String telefons;
     private String parole;
+    private Integer valstsKods;
+    private Integer reitings;
+    private Integer reitinguSkaits;
 
     public int getServisasniedzejs_ID() {
         return servisasniedzejs_ID;
@@ -63,5 +66,28 @@ public class Service {
 
     public void setParole(String parole) {
         this.parole = parole;
+    }
+
+    public Integer getValstsKods(){
+        return valstsKods;
+    }
+    public void setValstsKods(Integer valstsKods){
+        this.valstsKods = valstsKods;
+    }
+
+    public Integer getReitings() {
+        return reitings;
+    }
+
+    public void setReitings(Integer reitings) {
+        this.reitings = reitings;
+    }
+
+    public Integer getReitinguSkaits() {
+        return reitinguSkaits;
+    }
+
+    public void setReitinguSkaits(Integer reitinguSkaits) {
+        this.reitinguSkaits = reitinguSkaits;
     }
 }

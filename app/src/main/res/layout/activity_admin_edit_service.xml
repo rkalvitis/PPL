@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="serviceprovider.activities.GetServiceProviderActivity">
+    tools:context="serviceprovider.activities.adminEditServiceActivity">
 
     <TextView
         android:id="@+id/service_email"
@@ -20,6 +20,41 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.311" />
 
+    <Button
+        android:id="@+id/btn_serivces"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:background="@drawable/rounded_button"
+        android:insetTop="8dp"
+        android:insetBottom="8dp"
+        android:padding="1dp"
+        android:text="Servisa sniedzēji"
+        android:textSize="10sp"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_users"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:background="@drawable/rounded_button"
+        android:insetTop="8dp"
+        android:insetBottom="8dp"
+        android:padding="1dp"
+        android:text="Lietotāji"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/user_phone"
         android:layout_width="134dp"
@@ -29,38 +64,25 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.609" />
 
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:text="Atslēgties"
-        android:textColor="#061359"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageButton
-        android:id="@+id/btn_image_logout"
-        android:layout_width="51dp"
-        android:layout_height="42dp"
-        android:background="#00FFFFFF"
-        android:rotationY="180"
+        android:id="@+id/returnBackBtn"
+        android:layout_width="62dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Atgriezties"
+        android:scrollbarSize="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008"
-        app:srcCompat="@drawable/baseline_logout_24" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
 
     <TextView
         android:id="@+id/page_name"
@@ -117,52 +139,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.41" />
 
-    <TextView
-        android:id="@+id/info"
-        android:layout_width="199dp"
-        android:layout_height="92dp"
-        android:text="Ja vēlaties mainīt citu profila informāciju, sazinieties ar lietotnes administratoru."
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974" />
-
     <EditText
         android:id="@+id/value_name"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ems="10"
-        android:enabled="false"
-        android:focusable="false"
         android:inputType="text"
         android:text="Nosaukums"
         android:drawableLeft="@drawable/baseline_person_24"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintVertical_bias="0.205" />
 
     <EditText
         android:id="@+id/value_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:enabled="false"
-        android:focusable="false"
         android:inputType="text"
         android:text="Pilsēta"
         android:drawableLeft="@drawable/baseline_location_city_24"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.412" />
@@ -172,33 +176,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:enabled="false"
-        android:focusable="false"
         android:inputType="text"
         android:text="Adrese"
         android:drawableLeft="@drawable/baseline_add_location_24"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintHorizontal_bias="0.99"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.516" />
+
+    <ImageButton
+        android:id="@+id/btn_image_editName4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512"
+        app:srcCompat="@drawable/baseline_edit_24" />
 
     <EditText
         android:id="@+id/value_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:enabled="false"
-        android:focusable="false"
         android:inputType="textEmailAddress"
         android:text="E-pasts"
         android:drawableLeft="@drawable/baseline_email_24"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.31" />
@@ -208,18 +221,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:enabled="false"
-        android:focusable="false"
         android:inputType="phone"
         android:text="Numurs"
-        android:drawableLeft="@drawable/baseline_phone_24"
         android:textColor="#000000"
+        android:drawableLeft="@drawable/baseline_phone_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintHorizontal_bias="0.995"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.609" />
+
+    <ImageButton
+        android:id="@+id/btn_image_editName5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606"
+        app:srcCompat="@drawable/baseline_edit_24" />
 
     <com.hbb20.CountryCodePicker
         android:id="@+id/countryCodePicker"
@@ -234,15 +258,65 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.722" />
 
+    <ImageButton
+        android:id="@+id/btn_image_editName"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205"
+        app:srcCompat="@drawable/baseline_edit_24" />
+
+    <ImageButton
+        android:id="@+id/btn_image_editName2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.412"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305"
+        app:srcCompat="@drawable/baseline_edit_24" />
+
+    <ImageButton
+        android:id="@+id/btn_image_editName3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.408"
+        app:srcCompat="@drawable/baseline_edit_24" />
+
     <Button
-        android:id="@+id/changePassword"
-        android:layout_width="239dp"
-        android:layout_height="39dp"
-        android:text="Mainīt paroli"
+        android:id="@+id/btn_save"
+        android:layout_width="259dp"
+        android:layout_height="51dp"
+        android:text="Saglabāt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.812" />
+        app:layout_constraintVertical_bias="0.86" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="259dp"
+        android:layout_height="51dp"
+        android:text="Dzēst lietotāju"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
