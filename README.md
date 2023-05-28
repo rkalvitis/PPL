@@ -1,0 +1,29 @@
+# PPL
+
+## OOP principles
+
+Projekts ir izstrādāts, izmantojot modernas Android lietotņu izstrādes labākās prakses un arhitektūras modeļus, lai nodrošinātu kodu, kas ir viegli uzturēt un paplašināt.
+
+Mēs izmantojām Model-View-Controller (MVC) un Model-View-ViewModel (MVVM) modeļus. 
+Modelis definē lietotnes datu struktūru un biznesa loģiku. Skats, ko parasti reprezentē aktivitātes, fragmenti un XML izkārtojumi, atspoguļo šos datus lietotājam. 
+Kontrolieris vai ViewModel apstrādā lietotāja ievadi un atjaunina modeli, nodrošinot vispārīgu lietotāja saskarnes un datu atdalīšanu.
+
+Izmantojot Data Access Object (DAO) principu, mēs definējām, kā lietotne sazinās ar datubāzi. DAO ļauj mums izolēt datu apstrādāšanas 
+loģiku un nodrošināt vienkāršāku un tīrāku kodu, kas ir viegli uzturēt.
+
+Mēs arī izmantojām adapterus, lai savienotu datus ar Android skatu komponentiem, piemēram, RecyclerView vai ListView. 
+Adapteri nodrošina efektīvu un optimizētu datu parādīšanu skatā, tādējādi uzlabojot lietotāja pieredzi.
+
+Šāda arhitektūra nodrošina modulāru un uzturējamu kodu, kas ir viegli testēt un paplašināt.
+
+## Application design and views
+
+![pamata skats](https://github.com/rkalvitis/PPL/assets/62305390/17a4e217-d289-4fee-a148-c45eb51fbbf4)
+![reģistrēšanās skats](https://github.com/rkalvitis/PPL/assets/62305390/dc207906-74d5-46cc-ba6c-4fcb6b4639b1)
+![lietotāja sakts](https://github.com/rkalvitis/PPL/assets/62305390/fab09c30-7541-4599-a4ee-106e62c813c5)
+![meklēšanas skats](https://github.com/rkalvitis/PPL/assets/62305390/52eba067-22ef-41dd-bee3-37e97fc176bb)
+![servisa rezervācijas skats](https://github.com/rkalvitis/PPL/assets/62305390/8fd04f32-9fe8-48bf-baec-ab4c31fb11da)
+![administratora skats-1](https://github.com/rkalvitis/PPL/assets/62305390/adcc136b-3e0d-4d47-b440-c45fa1946b0b)
+![administratora skats-2](https://github.com/rkalvitis/PPL/assets/62305390/77d4c31d-71be-4961-8e65-9037aed0a67b)
+![administratora skats-3](https://github.com/rkalvitis/PPL/assets/62305390/3ea13c18-7154-48d6-b93d-26ef3d0dd164)
+
