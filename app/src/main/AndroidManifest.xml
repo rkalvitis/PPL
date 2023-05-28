@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -29,6 +28,9 @@
             android:exported="false" />
         <activity
             android:name="serviceprovider.activities.SearchServicesProviderActivity"
+            android:exported="false" />
+        <activity
+            android:name="serviceprovider.activities.BookServiceProviderActivity"
             android:exported="false" />
         <activity
             android:name="users.activities.changePasswordActivity"
