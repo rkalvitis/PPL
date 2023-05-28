@@ -3,6 +3,10 @@
 ## Pilns apraksts
 [OOP - full.pdf](https://github.com/rkalvitis/PPL/files/11584984/OOP.-.full.pdf)
 
+## Tehnoloģijas
+- Java (front-end + back-end)
+- Miscrosoft Azure SQL (datubāze)
+
 ## OOP principi
 
 Projekts ir izstrādāts, izmantojot modernas Android lietotņu izstrādes labākās prakses un arhitektūras modeļus, lai nodrošinātu kodu, kas ir viegli uzturēt un paplašināt.
