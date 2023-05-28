@@ -26,7 +26,7 @@ Adapteri nodrošina efektīvu un optimizētu datu parādīšanu skatā, tādēj�
 
 Šāda arhitektūra nodrošina modulāru un uzturējamu kodu, kas ir viegli testēt un paplašināt.
 
-## Application design and views
+## Lietotnes dizains un skati
 
 #### Pamata skats
 <br/>
