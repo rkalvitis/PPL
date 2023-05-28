@@ -47,6 +47,9 @@
         <activity
             android:name="users.activities.ResetPasswordActivity"
             android:label="Reset Password" />
+        <activity
+            android:name="EventModule.actions.GetEventActivity"
+            android:exported="false" />
         <activity android:name="users.activities.RegisterActivity" />
         <activity android:name="users.activities.UserMainPageActivity" />
         <activity

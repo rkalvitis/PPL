@@ -95,3 +95,11 @@ Adapteri nodrošina efektīvu un optimizētu datu parādīšanu skatā, tādēj�
 
 <img src="https://github.com/rkalvitis/PPL/assets/62305390/fa5320ae-ca06-47e5-84c7-adb3e6d5ba1f" width="300">
 
+<br/>
+<br/>
+
+#### Pasākuma skats
+
+<br/>
+
+<img src="https://github.com/rkalvitis/PPL/assets/97198248/08f9f0e2-d72a-419b-8b3e-e0a7f84e7eb2" width="300">
