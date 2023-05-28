@@ -13,6 +13,7 @@ import com.example.ppl.R;
 
 import java.util.List;
 
+import serviceprovider.activities.BookServiceProviderActivity;
 import serviceprovider.activities.GetServiceProviderActivity;
 import serviceprovider.models.Service;
 
@@ -59,7 +60,7 @@ public class ServiceSearchAdapter extends RecyclerView.Adapter<ServiceSearchAdap
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
                         Service clickedService = services.get(position);
-                        Intent intent = new Intent(v.getContext(), GetServiceProviderActivity.class);
+                        Intent intent = new Intent(v.getContext(), BookServiceProviderActivity.class);
                         intent.putExtra("SERVISASNIEDZEJS_ID", clickedService.getServisasniedzejs_ID());
                         v.getContext().startActivity(intent);
                     }

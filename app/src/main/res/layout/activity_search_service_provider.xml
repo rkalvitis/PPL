@@ -37,12 +37,12 @@
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown" />
 
-    <!-- Add more EditTexts for additional filter criteria... -->
-
     <Button
         android:id="@+id/searchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:text="Search" />
 
     <TextView

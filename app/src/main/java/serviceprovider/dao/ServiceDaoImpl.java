@@ -134,9 +134,9 @@ public class ServiceDaoImpl implements ServiceDao {
         } else if (dateFrom == null && dateTo != null) {
             dateFrom = new Date();
             conditions.add("( s.servisasniedzejs_ID NOT IN (SELECT sr.servisasniedzejs_ID FROM Sniedzeja_rezervesana sr " +
-                "WHERE sr.servisasniedzejs_ID = s.servisasniedzejs_ID " +
-                "AND sr.datumsNo BETWEEN (CONVERT(DATETIME, ?, 126)) AND (CONVERT(DATETIME, ?, 126)) " +
-                "OR sr.datumsLidz BETWEEN (CONVERT(DATETIME, ?, 126)) AND (CONVERT(DATETIME, ?, 126))))");
+                    "WHERE sr.servisasniedzejs_ID = s.servisasniedzejs_ID " +
+                    "AND sr.datumsNo BETWEEN ? AND ? " +
+                    "OR sr.datumsLidz BETWEEN ? AND ?))");
             try{
                 params.add(convertDateFormat(dateFrom.toString()));
                 params.add(convertDateFormat(dateTo.toString()));
