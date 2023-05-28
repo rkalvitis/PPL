@@ -14,4 +14,7 @@
     <string name="passwordRepeat_hint">Parole atkārtoti <font color="#FF0000">*</font></string>
     <string name="passwordOld_hint">Vecā parole <font color="#FF0000">*</font></string>
     <string name="phoneNumber_hint">Telefona nr. <font color="#FF0000">*</font></string>
+    <string name="dateTime_hint">Datums un laiks <font color="#FF0000">*</font></string>
+    <string name="photoRepo">Foto repozitorijs</string>
+    <string name="atrasanasVieta">Atrašanās vieta</string>
 </resources>

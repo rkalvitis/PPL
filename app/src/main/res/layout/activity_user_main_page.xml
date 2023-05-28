@@ -97,6 +97,23 @@
         app:layout_constraintVertical_bias="0.061" />
 
     <Button
+        android:id="@+id/btn_get_event"
+        android:layout_width="69dp"
+        android:layout_height="32dp"
+        android:background="@drawable/rounded_button"
+        android:insetTop="8dp"
+        android:insetBottom="8dp"
+        android:padding="1dp"
+        android:text="Pasākums test"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <Button
         android:id="@+id/btn_serivces"
         android:layout_width="94dp"
         android:layout_height="35dp"

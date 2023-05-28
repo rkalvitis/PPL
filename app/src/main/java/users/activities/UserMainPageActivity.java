@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import serviceprovider.activities.SearchServicesProviderActivity;
+import EventModule.actions.GetEventActivity;
 import users.dao.UserDaoImpl;
 import users.dao.UserDao;
 import users.models.User;
@@ -33,6 +34,9 @@ public class UserMainPageActivity extends AppCompatActivity {
         
         Button searchServices = findViewById(R.id.btn_search_sevice_provider);
         addRedirectListener(searchServices, SearchServicesProviderActivity.class);
+
+        Button getEvent = findViewById(R.id.btn_get_event);
+        addRedirectListener(getEvent, GetEventActivity.class);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
