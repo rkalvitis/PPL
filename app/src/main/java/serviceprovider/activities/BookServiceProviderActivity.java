@@ -108,7 +108,7 @@ public class BookServiceProviderActivity extends BaseActivity {
 
                 // switch between dateFrom and dateTo when clicking calendar
                 if (clickCounter == 0){
-                    Calendar calendar = Calendar.getInstance();
+                    Calendar calendar = eventDay.getCalendar();
                     int year = calendar.get(Calendar.YEAR);
                     int month = calendar.get(Calendar.MONTH);
                     int day = calendar.get(Calendar.DAY_OF_MONTH);
@@ -126,7 +126,7 @@ public class BookServiceProviderActivity extends BaseActivity {
                     datePickerDialog.show();
                     clickCounter = 1;
                 } else {
-                    Calendar calendar = Calendar.getInstance();
+                    Calendar calendar = eventDay.getCalendar();
                     int year = calendar.get(Calendar.YEAR);
                     int month = calendar.get(Calendar.MONTH);
                     int day = calendar.get(Calendar.DAY_OF_MONTH);
