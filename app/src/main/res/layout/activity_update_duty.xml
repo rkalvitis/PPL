@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="duty.activities.UpdateDutyActivity">
+
+    <ImageButton
+        android:id="@+id/returnBackBtn"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Atgriezties"
+        android:scrollbarSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/textViewNosaukums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nosaukums:"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118"/>/>
+
+    <EditText
+        android:id="@+id/editTextNosaukums"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ievadi nosaukumu"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNosaukums"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewApraksts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apraksts:"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/textViewNosaukums"
+        app:layout_constraintTop_toBottomOf="@id/editTextNosaukums" />
+
+    <EditText
+        android:id="@+id/editTextApraksts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="ievadi aprakstu"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewApraksts"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPaveikts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paveikts"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextApraksts" />
+
+    <Button
+        android:id="@+id/buttonUpdateDuty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rediģēt"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxPaveikts" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
